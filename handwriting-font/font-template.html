@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>แม่แบบเขียนฟอนต์ลายมือ</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: 'Leelawadee UI', 'Cordia New', Tahoma, sans-serif; color: #333; }
+
+  .page {
+    width: 210mm; height: 296mm;
+    padding: 9mm 10mm;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+  .page.last { page-break-after: auto; }
+
+  /* fiducial corner marks for scan alignment */
+  .fid { position: absolute; width: 3.5mm; height: 3.5mm; background: #000; }
+  .fid.tl { top: 4mm; left: 4mm; }
+  .fid.tr { top: 4mm; right: 4mm; }
+  .fid.bl { bottom: 4mm; left: 4mm; }
+  .fid.br { bottom: 4mm; right: 4mm; }
+
+  .pghead {
+    display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 0.4mm solid #9cc3e8;
+    padding-bottom: 1mm; margin-bottom: 2.5mm;
+  }
+  .pghead h2 { font-size: 5mm; color: #1f4e79; font-weight: bold; }
+  .pghead .sub { font-size: 3.2mm; color: #6a92b8; }
+  .pgfoot {
+    position: absolute; bottom: 4.5mm; left: 0; right: 0;
+    text-align: center; font-size: 2.8mm; color: #9bb7cf;
+  }
+
+  /* ---------- writing cell ---------- */
+  :root {
+    --tone: 10mm;   /* ชั้นวรรณยุกต์ตำแหน่งสูง */
+    --upper: 11mm;  /* ชั้นสระบน + วรรณยุกต์ปกติ */
+    --body: 24mm;   /* ตัวพยัญชนะ */
+    --desc: 9mm;    /* สระล่าง */
+  }
+  .grid { display: flex; flex-wrap: wrap; gap: 2mm; }
+  .cell {
+    width: 36mm;
+    border: 0.3mm solid #b9d4ec;
+    border-radius: 1mm;
+    overflow: hidden;
+    background: #fff;
+  }
+  .lbl {
+    height: 7mm; background: #eef5fc;
+    font-size: 3mm; color: #41729f;
+    display: flex; align-items: center; gap: 1.3mm;
+    padding: 0 1.5mm;
+    white-space: nowrap; overflow: hidden;
+  }
+  .lbl .ch { font-size: 4.6mm; font-weight: bold; color: #1f4e79; flex-shrink: 0; }
+  .wa { position: relative; height: calc(var(--tone) + var(--upper) + var(--body) + var(--desc)); }
+  .band { position: absolute; left: 0; right: 0; }
+  .b-tone  { top: 0; height: var(--tone); border-bottom: 0.25mm dashed #a8c8e8; }
+  .b-upper { top: var(--tone); height: var(--upper); border-bottom: 0.35mm solid #7fb0dd; }
+  .b-body  { top: calc(var(--tone) + var(--upper)); height: var(--body); border-bottom: 0.55mm solid #4a90d9; }
+  .b-desc  { top: calc(var(--tone) + var(--upper) + var(--body)); height: var(--desc); }
+  .hl { background: #fff3c2; }
+  .band .hint {
+    position: absolute; left: 0; right: 0; top: 50%;
+    transform: translateY(-50%);
+    text-align: center; font-size: 3mm; color: #c2a44a;
+  }
+  .band .hint2 {
+    position: absolute; left: 0; right: 0; top: 50%;
+    transform: translateY(-50%);
+    text-align: center; font-size: 2.6mm; color: #c9c9c9;
+  }
+  .ref {
+    position: absolute; left: 0; right: 0;
+    text-align: center;
+    bottom: calc(var(--desc) + 3.3mm);
+    font-size: 26mm; line-height: 1;
+    color: #dcdcdc;
+  }
+  .ref.small { font-size: 13mm; bottom: calc(var(--desc) + 1.6mm); }
+
+  /* กรอบเส้นประบอกขนาดตัวอักษร */
+  .tbox {
+    position: absolute;
+    left: 6mm; right: 6mm;
+    top: calc(var(--tone) + var(--upper));
+    height: var(--body);
+    border: 0.45mm dashed #eda94f;
+    border-radius: 0.8mm;
+  }
+  .tbox-mark {
+    position: absolute;
+    left: 50%; width: 13mm; margin-left: -6.5mm;
+    border: 0.45mm dashed #eda94f;
+    border-radius: 0.8mm;
+  }
+  .tbox-mark.up { top: calc(var(--tone) + 1.2mm); height: calc(var(--upper) - 2.8mm); }
+  .tbox-mark.tn { top: 1.2mm; height: calc(var(--tone) - 2.8mm); }
+  .tbox-mark.lo { top: calc(var(--tone) + var(--upper) + var(--body) + 1mm); height: calc(var(--desc) - 2.6mm); }
+
+  /* ---------- page 1 ---------- */
+  .p1 h1 { font-size: 6.5mm; color: #1f4e79; margin-bottom: 1mm; }
+  .p1 .intro { font-size: 3.6mm; color: #555; margin-bottom: 3mm; }
+  .p1 ol { margin: 0 0 3mm 6mm; font-size: 3.5mm; line-height: 1.55; }
+  .p1 ol li { margin-bottom: 0.8mm; }
+  .keybox {
+    border: 0.4mm solid #e8a4b8; background: #fff0f4; border-radius: 1.5mm;
+    padding: 2.5mm 3mm; font-size: 3.5mm; line-height: 1.5;
+    margin-bottom: 4mm; color: #8c3a55;
+  }
+  .keybox b { color: #c0245c; }
+
+  .demo-wrap { display: flex; gap: 5mm; align-items: flex-start; margin-bottom: 4mm; }
+  .demo {
+    --tone: 9mm; --upper: 10mm; --body: 20mm; --desc: 8mm;
+    width: 95mm; flex-shrink: 0;
+    border: 0.3mm solid #b9d4ec; border-radius: 1mm;
+    position: relative;
+  }
+  .demo .wa { height: calc(var(--tone) + var(--upper) + var(--body) + var(--desc)); }
+  .demo .bandlabel {
+    position: absolute; right: 2mm; top: 50%; transform: translateY(-50%);
+    font-size: 3mm; text-align: right; line-height: 1.25;
+  }
+  .demo .b-tone { background: #ffeef4; }
+  .demo .b-upper { background: #fffbe8; }
+  .demo .tboxd {
+    position: absolute; left: 4mm; width: 34mm;
+    top: calc(var(--tone) + var(--upper));
+    height: var(--body);
+    border: 0.45mm dashed #eda94f; border-radius: 0.8mm;
+  }
+  .demo .g { position: absolute; line-height: 1; text-align: center; }
+  .demo .g-base { left: 5mm; width: 30mm; bottom: 11.3mm; font-size: 26mm; color: #b5b5b5; text-align: left; }
+  .demo .g-upper { left: 5mm; width: 15mm; bottom: 29.5mm; font-size: 9mm; color: #b08d1e; }
+  .demo .g-tone { left: 5mm; width: 15mm; bottom: 39.5mm; font-size: 9mm; color: #c0245c; }
+  .demo-side { font-size: 3.4mm; line-height: 1.5; color: #555; }
+  .demo-side b { color: #1f4e79; }
+
+  .practice {
+    border: 0.35mm dashed #9cc3e8; border-radius: 1.5mm;
+    padding: 2.5mm 3mm;
+  }
+  .practice .pt { font-size: 3.5mm; color: #41729f; margin-bottom: 2mm; }
+  .pline { height: 13mm; border-bottom: 0.3mm solid #c5dcf0; }
+  .pline:last-child { border-bottom: none; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ หน้า 1 : คำแนะนำ ═══════════ -->
+<div class="page p1">
+  <div class="fid tl"></div><div class="fid tr"></div><div class="fid bl"></div><div class="fid br"></div>
+
+  <h1>แม่แบบเขียนฟอนต์ลายมือของกิฟ ✎</h1>
+  <div class="intro">เขียนตามช่องในหน้า 2–10 แล้วสแกนส่งกลับมา เดี๋ยวแปลงเป็นไฟล์ฟอนต์ (.ttf) ให้ใช้ได้เลย</div>
+
+  <div class="keybox">
+    <b>หัวใจสำคัญ — เรื่องวรรณยุกต์ที่กิฟกังวล:</b> ในแม่แบบนี้ วรรณยุกต์ ( ่ ้ ๊ ๋ ) และการันต์ ( ์ ) มีให้เขียน <b>2 ชุด</b><br>
+    ① ชุด <b>"ปกติ"</b> — ใช้ตอนอยู่บนพยัญชนะตรงๆ เช่น ก่ ป้า ฟ้า → เขียนในแถบสระบน<br>
+    ② ชุด <b>"สูง"</b> — ใช้ตอนมีสระบนคั่นอยู่ เช่น กิ๊ฟ ที่ เสื้อ → เขียนในแถบบนสุด<br>
+    พอทำเป็นฟอนต์ ระบบจะเลือกตัวที่ถูกให้อัตโนมัติ คำว่า <b>กิ๊ฟ</b> สระอิกับไม้ตรีจะไม่ทับกันแน่นอน
+  </div>
+
+  <div class="demo-wrap">
+    <div class="demo">
+      <div class="wa">
+        <div class="band b-tone"><div class="bandlabel" style="color:#c0245c;">ชั้นที่ 2 : วรรณยุกต์เมื่อมีสระบน<br>(ตัว ๊ ของ "กิ๊")</div></div>
+        <div class="band b-upper"><div class="bandlabel" style="color:#b08d1e;">ชั้นที่ 1 : สระบน ิ ี ึ ื ั ็<br>และวรรณยุกต์เมื่อไม่มีสระบน</div></div>
+        <div class="band b-body"><div class="bandlabel" style="color:#41729f;">ตัวพยัญชนะ (เขียนสูงเต็มช่วง)<br>หางตัว ป ฝ ฟ โผล่ขึ้นไปได้</div></div>
+        <div class="band b-desc"><div class="bandlabel" style="color:#41729f;">สระล่าง ุ ู และหาง ฎ ฏ</div></div>
+        <div class="tboxd"></div>
+        <div class="g g-base">กฟ</div>
+        <div class="g g-upper">◌ิ</div>
+        <div class="g g-tone">◌๊</div>
+      </div>
+    </div>
+    <div class="demo-side">
+      <b>ผังชั้นการเขียน</b><br>
+      ทุกช่องเขียนจะมีเส้นบรรทัดแบบนี้<br>
+      — เส้นทึบหนา = เส้นฐาน (บรรทัดล่างของตัวอักษร)<br>
+      — เส้นทึบบาง = ความสูงหัวตัวอักษร<br>
+      — เส้นประ = เพดานชั้นวรรณยุกต์<br><br>
+      <b>แถบสีเหลืองในช่อง</b> = ตำแหน่งที่ต้องเขียน<br>
+      เครื่องหมายตัวนั้น อย่าเขียนออกนอกแถบ
+    </div>
+  </div>
+
+  <b style="font-size:4mm; color:#1f4e79;">วิธีใช้</b>
+  <ol>
+    <li>ปริ้นทุกหน้าลงกระดาษ A4 ขาว ที่ <b>ขนาดจริง 100%</b> (ห้ามย่อ–ขยายให้พอดีหน้า)</li>
+    <li>ใช้<b>ปากกาหมึกดำ</b>เส้นคม 0.5–0.7 มม. (เจลหรือหมึกซึม) — ห้ามดินสอ / ปากกาน้ำเงิน</li>
+    <li><b>เขียนให้เต็มกรอบเส้นประสีส้มพอดี</b> — ห้ามอ้วนกว่ากรอบ ห้ามสูงกว่ากรอบ ทุกตัวจะได้ขนาดเท่ากันหมด (ตัวสีเทาคือตัวอย่างตำแหน่ง ส่วนรูปทรงเขียนตามลายมือกิฟเอง)</li>
+    <li>ข้อยกเว้นที่<b>ยื่นออกนอกกรอบได้</b> : หางบนของ ป ฝ ฟ ฬ ยื่นขึ้น · หางล่างของ ฎ ฏ ยื่นลง · ตัว โ ใ ไ สูงกว่ากรอบได้</li>
+    <li>ช่องที่มี<b>แถบเหลือง</b> (สระบน สระล่าง วรรณยุกต์) เขียนเฉพาะเครื่องหมายนั้นตัวเดียว เล็กๆ ให้พอดีกรอบประในแถบเหลือง</li>
+    <li>เขียนพลาดไม่ต้องขูดลบ — ใช้ช่อง "สำรอง" ท้ายหมวด หรือปริ้นหน้านั้นซ้ำแล้วเขียนใหม่</li>
+    <li>อย่าเขียนโดนสี่เหลี่ยมดำมุมกระดาษ (ใช้จัดแนวตอนสแกน)</li>
+    <li>เสร็จแล้ว<b>สแกน 300–600 dpi</b> (ขาวดำหรือ grayscale) หรือถ่ายรูปตรงๆ แสงสม่ำเสมอ ไม่เอียง แล้วส่งไฟล์มาได้เลย</li>
+  </ol>
+
+  <div class="practice">
+    <div class="pt">ซ้อมมือก่อนเริ่ม — ลองเขียนคำเหล่านี้เพื่อเช็กว่าวรรณยุกต์ไม่ชนสระ :&nbsp; <b>กิ๊ฟ &nbsp;น้ำ &nbsp;ที่สุด &nbsp;เสื้อ &nbsp;ป้า &nbsp;ปิ่น &nbsp;ฟ้า</b> &nbsp;(ส่วนนี้ไม่ต้องสแกน)</div>
+    <div class="pline"></div>
+    <div class="pline"></div>
+    <div class="pline"></div>
+  </div>
+
+  <div class="pgfoot">ฟอนต์ลายมือกิฟ — หน้า 1/10</div>
+</div>
+
+<!-- ═══════════ หน้า 2–7 : สร้างด้วยสคริปต์ ═══════════ -->
+<div id="gen"></div>
+
+<script>
+const CONS = [
+  ["ก","ไก่"],["ข","ไข่"],["ฃ","ขวด"],["ค","ควาย"],["ฅ","คน"],["ฆ","ระฆัง"],["ง","งู"],
+  ["จ","จาน"],["ฉ","ฉิ่ง"],["ช","ช้าง"],["ซ","โซ่"],["ฌ","เฌอ"],["ญ","หญิง"],["ฎ","ชฎา"],
+  ["ฏ","ปฏัก"],["ฐ","ฐาน"],["ฑ","มณโฑ"],["ฒ","ผู้เฒ่า"],["ณ","เณร"],["ด","เด็ก"],
+  ["ต","เต่า"],["ถ","ถุง"],["ท","ทหาร"],["ธ","ธง"],["น","หนู"],["บ","ใบไม้"],["ป","ปลา"],
+  ["ผ","ผึ้ง"],["ฝ","ฝา"],["พ","พาน"],["ฟ","ฟัน"],["ภ","สำเภา"],["ม","ม้า"],["ย","ยักษ์"],
+  ["ร","เรือ"],["ล","ลิง"],["ว","แหวน"],["ศ","ศาลา"],["ษ","ฤๅษี"],["ส","เสือ"],
+  ["ห","หีบ"],["ฬ","จุฬา"],["อ","อ่าง"],["ฮ","นกฮูก"]
+];
+const BASEV = [
+  ["ะ","สระอะ"],["า","สระอา"],["ำ","สระอำ"],["เ","สระเอ"],["แ","สระแอ"],["โ","สระโอ"],
+  ["ใ","ไม้ม้วน"],["ไ","ไม้มลาย"],["ฤ","ตัว ฤ"],["ฦ","ตัว ฦ"],["ๅ","ลากข้าง"],
+  ["ฯ","ไปยาลน้อย"],["ๆ","ไม้ยมก"],["฿","บาท"]
+];
+const UPPERV = [
+  ["ั","ไม้หัน (กั)"],["ิ","สระอิ (กิ)"],["ี","สระอี (กี)"],["ึ","สระอึ (กึ)"],
+  ["ื","สระอือ (กื)"],["็","ไต่คู้ (เป็น)"],["ํ","นิคหิต"]
+];
+const LOWERV = [ ["ุ","สระอุ (กุ)"],["ู","สระอู (กู)"] ];
+const TONE1 = [
+  ["่","ไม้เอก·ปกติ (ก่)"],["้","ไม้โท·ปกติ (ก้)"],["๊","ไม้ตรี·ปกติ (ก๊)"],
+  ["๋","ไม้จัตวา·ปกติ (ก๋)"],["์","การันต์·ปกติ (ห์)"]
+];
+const TONE2 = [
+  ["่","ไม้เอก·สูง (กิ่)"],["้","ไม้โท·สูง (กิ้)"],["๊","ไม้ตรี·สูง (กิ๊)"],
+  ["๋","ไม้จัตวา·สูง (กิ๋)"],["์","การันต์·สูง (ติ์)"]
+];
+const TDIGITS = "๐๑๒๓๔๕๖๗๘๙".split("").map((d,i)=>[d,"เลขไทย "+i]);
+const ADIGITS = "0123456789".split("").map(d=>[d,"เลข "+d]);
+const PUNCT = [
+  [".","จุด"],[",","จุลภาค"],["!","อัศเจรีย์"],["?","ปรัศนี"],["\"","อัญประกาศ"],
+  ["'","อะพอสทรอฟี"],["(","วงเล็บเปิด"],[")","วงเล็บปิด"],["[","เหลี่ยมเปิด"],["]","เหลี่ยมปิด"],
+  ["-","ยัติภังค์"],["_","ขีดล่าง"],[":","ทวิภาค"],[";","อัฒภาค"],["/","ทับ"],
+  ["\\","ทับกลับ"],["@","แอต"],["#","แฮช"],["%","เปอร์เซ็นต์"],["&","แอนด์"]
+];
+
+const DOT = "◌"; // dotted circle
+
+function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;"); }
+
+// type: base | small | upper | lower | tone2 | spare
+function cell(ch, name, type){
+  let lbl, wa = "";
+  const isMark = ["upper","lower","tone1","tone2"].includes(type);
+  const shownCh = isMark ? DOT + ch : ch;
+  lbl = '<div class="lbl"><span class="ch">' + esc(shownCh) + '</span><span>' + esc(name) + '</span></div>';
+
+  let tone = '<div class="band b-tone"></div>';
+  let upper = '<div class="band b-upper"></div>';
+  let body = '<div class="band b-body"></div>';
+  let desc = '<div class="band b-desc"></div>';
+  let ref = "";
+
+  if (type === "base") {
+    ref = '<div class="ref">' + esc(ch) + '</div><div class="tbox"></div>';
+  } else if (type === "small") {
+    ref = '<div class="ref small">' + esc(ch) + '</div>';
+  } else if (type === "upper" || type === "tone1") {
+    upper = '<div class="band b-upper hl"><div class="hint">เขียน ' + esc(DOT+ch) + ' ในกรอบ</div></div>';
+    ref = '<div class="tbox-mark up"></div>';
+  } else if (type === "tone2") {
+    tone = '<div class="band b-tone hl"><div class="hint">เขียน ' + esc(DOT+ch) + ' ในกรอบ</div></div>';
+    upper = '<div class="band b-upper"><div class="hint2">(ที่ของสระบน — เว้นว่าง)</div></div>';
+    ref = '<div class="tbox-mark tn"></div>';
+  } else if (type === "lower") {
+    desc = '<div class="band b-desc hl"><div class="hint">เขียน ' + esc(DOT+ch) + ' ในกรอบ</div></div>';
+    ref = '<div class="tbox-mark lo"></div>';
+  } else if (type === "spare") {
+    lbl = '<div class="lbl"><span class="ch">✎</span><span>' + esc(name) + '</span></div>';
+    body = '<div class="band b-body"><div class="hint2">เขียนตัวที่พลาด แล้ววงกลมช่องเดิม</div></div>';
+  }
+  wa = '<div class="wa">' + tone + upper + body + desc + ref + '</div>';
+  return '<div class="cell">' + lbl + wa + '</div>';
+}
+
+function page(num, total, title, sub, cellsHtml, last){
+  return '<div class="page' + (last ? ' last' : '') + '">' +
+    '<div class="fid tl"></div><div class="fid tr"></div><div class="fid bl"></div><div class="fid br"></div>' +
+    '<div class="pghead"><h2>' + title + '</h2><div class="sub">' + sub + '</div></div>' +
+    '<div class="grid">' + cellsHtml + '</div>' +
+    '<div class="pgfoot">ฟอนต์ลายมือกิฟ — หน้า ' + num + '/' + total + '</div>' +
+    '</div>';
+}
+
+const mk = (arr, type) => arr.map(x => cell(x[0], x[1], type)).join("");
+
+const UPLAT = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(c=>[c,"พิมพ์ใหญ่"]);
+const LOLAT = "abcdefghijklmnopqrstuvwxyz".split("").map(c=>[c,"พิมพ์เล็ก"]);
+
+const pages = [];
+pages.push(page(2, 10, "พยัญชนะ ๑", "ก – ด · เขียนเต็มกรอบเส้นประพอดี",
+  mk(CONS.slice(0,20), "base")));
+pages.push(page(3, 10, "พยัญชนะ ๒", "ต – ส · หาง ป ฝ ฟ โผล่เหนือกรอบได้",
+  mk(CONS.slice(20,40), "base")));
+pages.push(page(4, 10, "พยัญชนะ ๓ + สระหน้า–หลัง", "เขียนบนเส้นฐานตามตัวอย่างสีเทา",
+  mk(CONS.slice(40), "base") + mk(BASEV, "base") + cell("","สำรอง","spare") + cell("","สำรอง","spare")));
+pages.push(page(5, 10, "สระบน สระล่าง และวรรณยุกต์ (สำคัญที่สุด!)", "เขียนเฉพาะเครื่องหมาย ในแถบเหลืองเท่านั้น",
+  mk(UPPERV, "upper") + mk(LOWERV, "lower") + mk(TONE1, "tone1") + mk(TONE2, "tone2") + cell("","สำรอง","spare")));
+pages.push(page(6, 10, "ตัวเลข", "เลขไทยและเลขอารบิก · เต็มกรอบเส้นประ",
+  mk(TDIGITS, "base") + mk(ADIGITS, "base")));
+pages.push(page(7, 10, "เครื่องหมายวรรคตอน", "ขนาดตามตัวอย่างสีเทา อิงเส้นฐาน",
+  mk(PUNCT, "small")));
+pages.push(page(8, 10, "อังกฤษ ๑ — ตัวพิมพ์ใหญ่", "A – T · เต็มกรอบเส้นประ",
+  mk(UPLAT.slice(0,20), "base")));
+pages.push(page(9, 10, "อังกฤษ ๒ — พิมพ์ใหญ่ + พิมพ์เล็ก", "ตัวเล็กสูงราวครึ่งกรอบ · ตัวสูง b d f h k l t เต็มกรอบ",
+  mk(UPLAT.slice(20), "base") + mk(LOLAT.slice(0,14), "base")));
+pages.push(page(10, 10, "อังกฤษ ๓ — ตัวพิมพ์เล็ก", "หางตัว g j p q y ลงไปในแถบล่าง",
+  mk(LOLAT.slice(14), "base") + cell("","สำรอง","spare") + cell("","สำรอง","spare"), true));
+
+document.getElementById("gen").innerHTML = pages.join("");
+</script>
+</body>
+</html>

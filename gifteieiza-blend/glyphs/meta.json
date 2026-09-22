@@ -1,0 +1,1692 @@
+[
+{
+"key": "u0021",
+"ch": "!",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 78,
+"bbox_h": 479,
+"base_dy": 626.957515781213,
+"src": "Slim"
+},
+{
+"key": "u0022",
+"ch": "\"",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 144,
+"bbox_h": 141,
+"base_dy": 448.74986256640017,
+"src": "Round"
+},
+{
+"key": "u0023",
+"ch": "#",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 332,
+"bbox_h": 359,
+"base_dy": 481.71802023558473,
+"src": "Round"
+},
+{
+"key": "u0025",
+"ch": "%",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 322,
+"bbox_h": 390,
+"base_dy": 428.36521300143374,
+"src": "Round"
+},
+{
+"key": "u0026",
+"ch": "&",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 309,
+"bbox_h": 351,
+"base_dy": 413.82205356236534,
+"src": "Soft"
+},
+{
+"key": "u0027",
+"ch": "'",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 58,
+"bbox_h": 181,
+"base_dy": 476.2308515889023,
+"src": "Round"
+},
+{
+"key": "u0028",
+"ch": "(",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 130,
+"bbox_h": 528,
+"base_dy": 562.8762033607381,
+"src": "Soft"
+},
+{
+"key": "u0029",
+"ch": ")",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 121,
+"bbox_h": 496,
+"base_dy": 540.9829512036981,
+"src": "Soft"
+},
+{
+"key": "u002C",
+"ch": ",",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 110,
+"bbox_h": 230,
+"base_dy": 185.05672299424944,
+"src": "Soft"
+},
+{
+"key": "u002D",
+"ch": "-",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 221,
+"bbox_h": 84,
+"base_dy": 261.35227321967125,
+"src": "Round"
+},
+{
+"key": "u002E",
+"ch": ".",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 76,
+"bbox_h": 79,
+"base_dy": 193.1069835614362,
+"src": "Soft"
+},
+{
+"key": "u002F",
+"ch": "/",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 234,
+"bbox_h": 475,
+"base_dy": 511.5792935214514,
+"src": "Soft"
+},
+{
+"key": "u0030",
+"ch": "0",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 260,
+"bbox_h": 370,
+"base_dy": 421.6694645949265,
+"src": "Soft"
+},
+{
+"key": "u0031",
+"ch": "1",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 144,
+"bbox_h": 487,
+"base_dy": 546.3405178244716,
+"src": "Soft"
+},
+{
+"key": "u0032",
+"ch": "2",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 244,
+"bbox_h": 481,
+"base_dy": 580.1728912234562,
+"src": "Soft"
+},
+{
+"key": "u0033",
+"ch": "3",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 271,
+"bbox_h": 474,
+"base_dy": 594.8338389283923,
+"src": "Soft"
+},
+{
+"key": "u0034",
+"ch": "4",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 266,
+"bbox_h": 511,
+"base_dy": 553.4071546395312,
+"src": "Soft"
+},
+{
+"key": "u0035",
+"ch": "5",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 290,
+"bbox_h": 473,
+"base_dy": 565.3920303627681,
+"src": "Soft"
+},
+{
+"key": "u0036",
+"ch": "6",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 268,
+"bbox_h": 516,
+"base_dy": 595.9041759168881,
+"src": "Soft"
+},
+{
+"key": "u0037",
+"ch": "7",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 284,
+"bbox_h": 487,
+"base_dy": 570.9727812212403,
+"src": "Soft"
+},
+{
+"key": "u0038",
+"ch": "8",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 296,
+"bbox_h": 551,
+"base_dy": 552.6125187074846,
+"src": "Soft"
+},
+{
+"key": "u0039",
+"ch": "9",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 268,
+"bbox_h": 545,
+"base_dy": 548.279126555015,
+"src": "Soft"
+},
+{
+"key": "u003A",
+"ch": ":",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 64,
+"bbox_h": 245,
+"base_dy": 360.1250045808206,
+"src": "Soft"
+},
+{
+"key": "u003B",
+"ch": ";",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 145,
+"bbox_h": 417,
+"base_dy": 347.54700380592476,
+"src": "Soft"
+},
+{
+"key": "u003F",
+"ch": "?",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 219,
+"bbox_h": 474,
+"base_dy": 579.9080587420037,
+"src": "Slim"
+},
+{
+"key": "u0040",
+"ch": "@",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 294,
+"bbox_h": 389,
+"base_dy": 450.78995838420735,
+"src": "Round"
+},
+{
+"key": "u0041",
+"ch": "A",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 536,
+"bbox_h": 656,
+"base_dy": 564.3715722415143,
+"src": "Slim"
+},
+{
+"key": "u0042",
+"ch": "B",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 411,
+"bbox_h": 649,
+"base_dy": 579.713363474578,
+"src": "Slim"
+},
+{
+"key": "u0043",
+"ch": "C",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 390,
+"bbox_h": 600,
+"base_dy": 572.5082602254198,
+"src": "Slim"
+},
+{
+"key": "u0044",
+"ch": "D",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 467,
+"bbox_h": 621,
+"base_dy": 615.287383815583,
+"src": "Slim"
+},
+{
+"key": "u0045",
+"ch": "E",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 325,
+"bbox_h": 650,
+"base_dy": 599.8110838558069,
+"src": "Slim"
+},
+{
+"key": "u0046",
+"ch": "F",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 276,
+"bbox_h": 544,
+"base_dy": 566.7220072248087,
+"src": "Slim"
+},
+{
+"key": "u0047",
+"ch": "G",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 332,
+"bbox_h": 583,
+"base_dy": 529.1836272420396,
+"src": "Slim"
+},
+{
+"key": "u0048",
+"ch": "H",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 434,
+"bbox_h": 562,
+"base_dy": 579.9539680967634,
+"src": "Slim"
+},
+{
+"key": "u0049",
+"ch": "I",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 65,
+"bbox_h": 572,
+"base_dy": 575.5506911469563,
+"src": "Slim"
+},
+{
+"key": "u004A",
+"ch": "J",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 323,
+"bbox_h": 586,
+"base_dy": 543.9426832723351,
+"src": "Slim"
+},
+{
+"key": "u004B",
+"ch": "K",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 365,
+"bbox_h": 529,
+"base_dy": 549.6561118245717,
+"src": "Slim"
+},
+{
+"key": "u004C",
+"ch": "L",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 268,
+"bbox_h": 580,
+"base_dy": 588.763843301298,
+"src": "Slim"
+},
+{
+"key": "u004D",
+"ch": "M",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 643,
+"bbox_h": 636,
+"base_dy": 561.0724710410175,
+"src": "Slim"
+},
+{
+"key": "u004E",
+"ch": "N",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 492,
+"bbox_h": 716,
+"base_dy": 585.4329656894635,
+"src": "Slim"
+},
+{
+"key": "u004F",
+"ch": "O",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 502,
+"bbox_h": 555,
+"base_dy": 576.3517566817964,
+"src": "Slim"
+},
+{
+"key": "u0050",
+"ch": "P",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 361,
+"bbox_h": 599,
+"base_dy": 572.1505046048153,
+"src": "Slim"
+},
+{
+"key": "u0051",
+"ch": "Q",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 582,
+"bbox_h": 632,
+"base_dy": 565.9444612950643,
+"src": "Slim"
+},
+{
+"key": "u0052",
+"ch": "R",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 357,
+"bbox_h": 623,
+"base_dy": 594.9728440810284,
+"src": "Slim"
+},
+{
+"key": "u0053",
+"ch": "S",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 396,
+"bbox_h": 617,
+"base_dy": 580.6196693325722,
+"src": "Slim"
+},
+{
+"key": "u0054",
+"ch": "T",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 295,
+"bbox_h": 559,
+"base_dy": 668.3081740901221,
+"src": "Slim"
+},
+{
+"key": "u0055",
+"ch": "U",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 406,
+"bbox_h": 527,
+"base_dy": 638.7192596305683,
+"src": "Slim"
+},
+{
+"key": "u0056",
+"ch": "V",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 492,
+"bbox_h": 576,
+"base_dy": 713.8551601774589,
+"src": "Slim"
+},
+{
+"key": "u0057",
+"ch": "W",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 776,
+"bbox_h": 620,
+"base_dy": 661.9763277278408,
+"src": "Slim"
+},
+{
+"key": "u0058",
+"ch": "X",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 526,
+"bbox_h": 651,
+"base_dy": 642.5693944652784,
+"src": "Slim"
+},
+{
+"key": "u0059",
+"ch": "Y",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 386,
+"bbox_h": 481,
+"base_dy": 609.1707843091953,
+"src": "Slim"
+},
+{
+"key": "u005A",
+"ch": "Z",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 468,
+"bbox_h": 630,
+"base_dy": 688.4524300149737,
+"src": "Slim"
+},
+{
+"key": "u005B",
+"ch": "[",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 193,
+"bbox_h": 517,
+"base_dy": 566.7733491626987,
+"src": "Soft"
+},
+{
+"key": "u005C",
+"ch": "\\",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 306,
+"bbox_h": 434,
+"base_dy": 506.71285751915923,
+"src": "Round"
+},
+{
+"key": "u005D",
+"ch": "]",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 183,
+"bbox_h": 500,
+"base_dy": 534.8714874241233,
+"src": "Soft"
+},
+{
+"key": "u005F",
+"ch": "_",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 227,
+"bbox_h": 61,
+"base_dy": 57.54047658284628,
+"src": "Round"
+},
+{
+"key": "u0061",
+"ch": "a",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 378,
+"bbox_h": 447,
+"base_dy": 454.196200247153,
+"src": "Slim"
+},
+{
+"key": "u0062",
+"ch": "b",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 285,
+"bbox_h": 613,
+"base_dy": 648.2973887387418,
+"src": "Slim"
+},
+{
+"key": "u0063",
+"ch": "c",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 297,
+"bbox_h": 396,
+"base_dy": 439.128653115931,
+"src": "Slim"
+},
+{
+"key": "u0064",
+"ch": "d",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 307,
+"bbox_h": 619,
+"base_dy": 626.1647344048171,
+"src": "Slim"
+},
+{
+"key": "u0065",
+"ch": "e",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 284,
+"bbox_h": 417,
+"base_dy": 422.6582308725716,
+"src": "Slim"
+},
+{
+"key": "u0066",
+"ch": "f",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 269,
+"bbox_h": 588,
+"base_dy": 654.0797658830363,
+"src": "Slim"
+},
+{
+"key": "u0067",
+"ch": "g",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 292,
+"bbox_h": 647,
+"base_dy": 436.2630977536678,
+"src": "Slim"
+},
+{
+"key": "u0068",
+"ch": "h",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 303,
+"bbox_h": 671,
+"base_dy": 654.9138293696218,
+"src": "Slim"
+},
+{
+"key": "u0069",
+"ch": "i",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 79,
+"bbox_h": 549,
+"base_dy": 614.6654396235535,
+"src": "Slim"
+},
+{
+"key": "u006A",
+"ch": "j",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 338,
+"bbox_h": 816,
+"base_dy": 625.0069732305504,
+"src": "Slim"
+},
+{
+"key": "u006B",
+"ch": "k",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 265,
+"bbox_h": 705,
+"base_dy": 585.8423833095273,
+"src": "Slim"
+},
+{
+"key": "u006C",
+"ch": "l",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 82,
+"bbox_h": 687,
+"base_dy": 640.8961149519605,
+"src": "Slim"
+},
+{
+"key": "u006D",
+"ch": "m",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 523,
+"bbox_h": 513,
+"base_dy": 474.7413295568185,
+"src": "Slim"
+},
+{
+"key": "u006E",
+"ch": "n",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 299,
+"bbox_h": 448,
+"base_dy": 441.7637900502281,
+"src": "Slim"
+},
+{
+"key": "u006F",
+"ch": "o",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 396,
+"bbox_h": 436,
+"base_dy": 426.20817623695666,
+"src": "Slim"
+},
+{
+"key": "u0070",
+"ch": "p",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 302,
+"bbox_h": 596,
+"base_dy": 426.3128889376382,
+"src": "Slim"
+},
+{
+"key": "u0071",
+"ch": "q",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 387,
+"bbox_h": 612,
+"base_dy": 421.53404117460815,
+"src": "Slim"
+},
+{
+"key": "u0072",
+"ch": "r",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 215,
+"bbox_h": 373,
+"base_dy": 430.93582694215826,
+"src": "Slim"
+},
+{
+"key": "u0073",
+"ch": "s",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 308,
+"bbox_h": 484,
+"base_dy": 454.3115323009705,
+"src": "Slim"
+},
+{
+"key": "u0074",
+"ch": "t",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 331,
+"bbox_h": 565,
+"base_dy": 585.7677315876876,
+"src": "Slim"
+},
+{
+"key": "u0075",
+"ch": "u",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 409,
+"bbox_h": 385,
+"base_dy": 424.72211341521813,
+"src": "Slim"
+},
+{
+"key": "u0076",
+"ch": "v",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 392,
+"bbox_h": 388,
+"base_dy": 438.1102525112464,
+"src": "Slim"
+},
+{
+"key": "u0077",
+"ch": "w",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 476,
+"bbox_h": 471,
+"base_dy": 459.5550396737312,
+"src": "Slim"
+},
+{
+"key": "u0078",
+"ch": "x",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 341,
+"bbox_h": 497,
+"base_dy": 476.5378934499708,
+"src": "Slim"
+},
+{
+"key": "u0079",
+"ch": "y",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 410,
+"bbox_h": 580,
+"base_dy": 445.9151368399804,
+"src": "Slim"
+},
+{
+"key": "u007A",
+"ch": "z",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 364,
+"bbox_h": 400,
+"base_dy": 451.45513507306123,
+"src": "Slim"
+},
+{
+"key": "u0E01",
+"ch": "ก",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 253,
+"bbox_h": 380,
+"base_dy": 401.5084181855071,
+"src": "Round"
+},
+{
+"key": "u0E02",
+"ch": "ข",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 280,
+"bbox_h": 420,
+"base_dy": 442.8115357699975,
+"src": "Soft"
+},
+{
+"key": "u0E03",
+"ch": "ฃ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 292,
+"bbox_h": 381,
+"base_dy": 401.21969263963103,
+"src": "Soft"
+},
+{
+"key": "u0E04",
+"ch": "ค",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 240,
+"bbox_h": 397,
+"base_dy": 404.7129521284884,
+"src": "Soft"
+},
+{
+"key": "u0E05",
+"ch": "ฅ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 261,
+"bbox_h": 385,
+"base_dy": 379.9701994020077,
+"src": "Soft"
+},
+{
+"key": "u0E06",
+"ch": "ฆ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 295,
+"bbox_h": 381,
+"base_dy": 432.9167961677523,
+"src": "Round"
+},
+{
+"key": "u0E07",
+"ch": "ง",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 180,
+"bbox_h": 343,
+"base_dy": 376.01965372450684,
+"src": "Soft"
+},
+{
+"key": "u0E08",
+"ch": "จ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 269,
+"bbox_h": 468,
+"base_dy": 438.73606734017807,
+"src": "Round"
+},
+{
+"key": "u0E09",
+"ch": "ฉ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 321,
+"bbox_h": 383,
+"base_dy": 383.5035220052792,
+"src": "Round"
+},
+{
+"key": "u0E0A",
+"ch": "ช",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 289,
+"bbox_h": 377,
+"base_dy": 387.53563015395,
+"src": "Soft"
+},
+{
+"key": "u0E0B",
+"ch": "ซ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 319,
+"bbox_h": 413,
+"base_dy": 415.2247724850756,
+"src": "Soft"
+},
+{
+"key": "u0E0C",
+"ch": "ฌ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 421,
+"bbox_h": 400,
+"base_dy": 428.68441317828416,
+"src": "Round"
+},
+{
+"key": "u0E0D",
+"ch": "ญ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 402,
+"bbox_h": 516,
+"base_dy": 384.5815659694206,
+"src": "Soft"
+},
+{
+"key": "u0E0E",
+"ch": "ฎ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 331,
+"bbox_h": 510,
+"base_dy": 386.7203896022011,
+"src": "Firm"
+},
+{
+"key": "u0E0F",
+"ch": "ฏ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 342,
+"bbox_h": 526,
+"base_dy": 416.08795572916665,
+"src": "Firm"
+},
+{
+"key": "u0E10",
+"ch": "ฐ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 294,
+"bbox_h": 697,
+"base_dy": 498.9097109647728,
+"src": "Round"
+},
+{
+"key": "u0E11",
+"ch": "ฑ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 352,
+"bbox_h": 392,
+"base_dy": 394.6419821624091,
+"src": "Soft"
+},
+{
+"key": "u0E12",
+"ch": "ฒ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 424,
+"bbox_h": 389,
+"base_dy": 386.286898460497,
+"src": "Firm"
+},
+{
+"key": "u0E13",
+"ch": "ณ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 507,
+"bbox_h": 413,
+"base_dy": 399.7514718514291,
+"src": "Round"
+},
+{
+"key": "u0E14",
+"ch": "ด",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 262,
+"bbox_h": 356,
+"base_dy": 383.30722348891254,
+"src": "Soft"
+},
+{
+"key": "u0E15",
+"ch": "ต",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 281,
+"bbox_h": 375,
+"base_dy": 365.6679672366222,
+"src": "Soft"
+},
+{
+"key": "u0E16",
+"ch": "ถ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 227,
+"bbox_h": 383,
+"base_dy": 384.13107115278547,
+"src": "Soft"
+},
+{
+"key": "u0E17",
+"ch": "ท",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 298,
+"bbox_h": 326,
+"base_dy": 344.74545178960744,
+"src": "Soft"
+},
+{
+"key": "u0E18",
+"ch": "ธ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 238,
+"bbox_h": 405,
+"base_dy": 434.46019317326625,
+"src": "Soft"
+},
+{
+"key": "u0E19",
+"ch": "น",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 338,
+"bbox_h": 392,
+"base_dy": 377.3793614009045,
+"src": "Soft"
+},
+{
+"key": "u0E1A",
+"ch": "บ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 294,
+"bbox_h": 380,
+"base_dy": 366.7018267380646,
+"src": "Soft"
+},
+{
+"key": "u0E1B",
+"ch": "ป",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 334,
+"bbox_h": 544,
+"base_dy": 557.0283326842396,
+"src": "Soft"
+},
+{
+"key": "u0E1C",
+"ch": "ผ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 232,
+"bbox_h": 324,
+"base_dy": 369.4860925251437,
+"src": "Soft"
+},
+{
+"key": "u0E1D",
+"ch": "ฝ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 261,
+"bbox_h": 506,
+"base_dy": 537.3542855523478,
+"src": "Soft"
+},
+{
+"key": "u0E1E",
+"ch": "พ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 401,
+"bbox_h": 359,
+"base_dy": 381.6960410568498,
+"src": "Soft"
+},
+{
+"key": "u0E1F",
+"ch": "ฟ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 400,
+"bbox_h": 537,
+"base_dy": 544.3033251843374,
+"src": "Soft"
+},
+{
+"key": "u0E20",
+"ch": "ภ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 360,
+"bbox_h": 397,
+"base_dy": 368.17215757735187,
+"src": "Soft"
+},
+{
+"key": "u0E21",
+"ch": "ม",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 275,
+"bbox_h": 385,
+"base_dy": 383.6584368206878,
+"src": "Soft"
+},
+{
+"key": "u0E22",
+"ch": "ย",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 241,
+"bbox_h": 379,
+"base_dy": 398.9931501051651,
+"src": "Soft"
+},
+{
+"key": "u0E23",
+"ch": "ร",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 185,
+"bbox_h": 436,
+"base_dy": 400.1011199118424,
+"src": "Soft"
+},
+{
+"key": "u0E24",
+"ch": "ฤ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 246,
+"bbox_h": 518,
+"base_dy": 423.88366613186594,
+"src": "Soft"
+},
+{
+"key": "u0E25",
+"ch": "ล",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 244,
+"bbox_h": 390,
+"base_dy": 359.77038557610547,
+"src": "Firm"
+},
+{
+"key": "u0E26",
+"ch": "ฦ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 346,
+"bbox_h": 517,
+"base_dy": 426.0967506291456,
+"src": "Soft"
+},
+{
+"key": "u0E27",
+"ch": "ว",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 217,
+"bbox_h": 373,
+"base_dy": 367.3734914254901,
+"src": "Soft"
+},
+{
+"key": "u0E28",
+"ch": "ศ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 331,
+"bbox_h": 498,
+"base_dy": 470.100609870777,
+"src": "Soft"
+},
+{
+"key": "u0E29",
+"ch": "ษ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 352,
+"bbox_h": 418,
+"base_dy": 388.7183107527102,
+"src": "Soft"
+},
+{
+"key": "u0E2A",
+"ch": "ส",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 282,
+"bbox_h": 420,
+"base_dy": 431.1665405246007,
+"src": "Firm"
+},
+{
+"key": "u0E2B",
+"ch": "ห",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 320,
+"bbox_h": 380,
+"base_dy": 376.901776294489,
+"src": "Firm"
+},
+{
+"key": "u0E2C",
+"ch": "ฬ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 478,
+"bbox_h": 499,
+"base_dy": 453.6059820031294,
+"src": "Soft"
+},
+{
+"key": "u0E2D",
+"ch": "อ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 275,
+"bbox_h": 371,
+"base_dy": 428.27277219650335,
+"src": "Slim"
+},
+{
+"key": "u0E2E",
+"ch": "ฮ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 253,
+"bbox_h": 493,
+"base_dy": 499.4266686186996,
+"src": "Slim"
+},
+{
+"key": "u0E2F",
+"ch": "ฯ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 331,
+"bbox_h": 482,
+"base_dy": 465.25294781085745,
+"src": "Slim"
+},
+{
+"key": "u0E30",
+"ch": "ะ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 253,
+"bbox_h": 355,
+"base_dy": 404.966449439283,
+"src": "Soft"
+},
+{
+"key": "u0E31",
+"ch": "ั",
+"type": "upper",
+"ppm": 17.5,
+"bbox_w": 156,
+"bbox_h": 117,
+"base_dy": 534.6542059224258,
+"src": "Firm"
+},
+{
+"key": "u0E32",
+"ch": "า",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 267,
+"bbox_h": 401,
+"base_dy": 409.22813245409816,
+"src": "Soft"
+},
+{
+"key": "u0E33",
+"ch": "ำ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 448,
+"bbox_h": 549,
+"base_dy": 567.7001897355954,
+"src": "Soft"
+},
+{
+"key": "u0E34",
+"ch": "ิ",
+"type": "upper",
+"ppm": 17.5,
+"bbox_w": 126,
+"bbox_h": 92,
+"base_dy": 513.1921955927259,
+"src": "Firm"
+},
+{
+"key": "u0E35",
+"ch": "ี",
+"type": "upper",
+"ppm": 17.5,
+"bbox_w": 127,
+"bbox_h": 123,
+"base_dy": 548.449747203843,
+"src": "Firm"
+},
+{
+"key": "u0E36",
+"ch": "ึ",
+"type": "upper",
+"ppm": 17.5,
+"bbox_w": 210,
+"bbox_h": 97,
+"base_dy": 528.2834861288267,
+"src": "Firm"
+},
+{
+"key": "u0E37",
+"ch": "ื",
+"type": "upper",
+"ppm": 17.5,
+"bbox_w": 158,
+"bbox_h": 155,
+"base_dy": 538.2756496389056,
+"src": "Firm"
+},
+{
+"key": "u0E38",
+"ch": "ุ",
+"type": "lower",
+"ppm": 17.5,
+"bbox_w": 76,
+"bbox_h": 130,
+"base_dy": -44.40428491709181,
+"src": "Firm"
+},
+{
+"key": "u0E39",
+"ch": "ู",
+"type": "lower",
+"ppm": 17.5,
+"bbox_w": 97,
+"bbox_h": 125,
+"base_dy": -20.51741470025508,
+"src": "Firm"
+},
+{
+"key": "u0E3F",
+"ch": "฿",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 269,
+"bbox_h": 643,
+"base_dy": 587.5578695045413,
+"src": "Soft"
+},
+{
+"key": "u0E40",
+"ch": "เ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 135,
+"bbox_h": 417,
+"base_dy": 429.6891044418672,
+"src": "Soft"
+},
+{
+"key": "u0E41",
+"ch": "แ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 313,
+"bbox_h": 445,
+"base_dy": 445.84042228017046,
+"src": "Soft"
+},
+{
+"key": "u0E42",
+"ch": "โ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 292,
+"bbox_h": 748,
+"base_dy": 764.1358479900979,
+"src": "Soft"
+},
+{
+"key": "u0E43",
+"ch": "ใ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 306,
+"bbox_h": 725,
+"base_dy": 753.5956519924772,
+"src": "Soft"
+},
+{
+"key": "u0E44",
+"ch": "ไ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 317,
+"bbox_h": 768,
+"base_dy": 758.880311396999,
+"src": "Soft"
+},
+{
+"key": "u0E45",
+"ch": "ๅ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 269,
+"bbox_h": 554,
+"base_dy": 418.50538309635147,
+"src": "Soft"
+},
+{
+"key": "u0E46",
+"ch": "ๆ",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 290,
+"bbox_h": 593,
+"base_dy": 472.4843778473239,
+"src": "Slim"
+},
+{
+"key": "u0E47",
+"ch": "็",
+"type": "upper",
+"ppm": 17.5,
+"bbox_w": 122,
+"bbox_h": 177,
+"base_dy": 581.0847369984926,
+"src": "Firm"
+},
+{
+"key": "u0E48",
+"ch": "่",
+"type": "upper",
+"ppm": 17.5,
+"bbox_w": 38,
+"bbox_h": 86,
+"base_dy": 555.5068573731577,
+"src": "Firm"
+},
+{
+"key": "u0E49",
+"ch": "้",
+"type": "upper",
+"ppm": 17.5,
+"bbox_w": 116,
+"bbox_h": 126,
+"base_dy": 562.5390176986023,
+"src": "Firm"
+},
+{
+"key": "u0E4A",
+"ch": "๊",
+"type": "upper",
+"ppm": 17.5,
+"bbox_w": 155,
+"bbox_h": 150,
+"base_dy": 579.8239180307539,
+"src": "Firm"
+},
+{
+"key": "u0E4B",
+"ch": "๋",
+"type": "upper",
+"ppm": 17.5,
+"bbox_w": 90,
+"bbox_h": 129,
+"base_dy": 535.973132174745,
+"src": "Firm"
+},
+{
+"key": "u0E4C",
+"ch": "์",
+"type": "upper",
+"ppm": 17.5,
+"bbox_w": 83,
+"bbox_h": 148,
+"base_dy": 577.9022024695295,
+"src": "Firm"
+},
+{
+"key": "u0E4D",
+"ch": "ํ",
+"type": "upper",
+"ppm": 17.5,
+"bbox_w": 68,
+"bbox_h": 72,
+"base_dy": 499.79174070906777,
+"src": "Firm"
+},
+{
+"key": "u0E50",
+"ch": "๐",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 251,
+"bbox_h": 314,
+"base_dy": 307.61249621385986,
+"src": "Soft"
+},
+{
+"key": "u0E51",
+"ch": "๑",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 223,
+"bbox_h": 320,
+"base_dy": 274.73635627777503,
+"src": "Soft"
+},
+{
+"key": "u0E52",
+"ch": "๒",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 416,
+"bbox_h": 558,
+"base_dy": 532.5093488504306,
+"src": "Round"
+},
+{
+"key": "u0E53",
+"ch": "๓",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 294,
+"bbox_h": 291,
+"base_dy": 278.7626289055669,
+"src": "Soft"
+},
+{
+"key": "u0E54",
+"ch": "๔",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 320,
+"bbox_h": 483,
+"base_dy": 459.1374913760965,
+"src": "Soft"
+},
+{
+"key": "u0E55",
+"ch": "๕",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 284,
+"bbox_h": 460,
+"base_dy": 446.5793127135479,
+"src": "Soft"
+},
+{
+"key": "u0E56",
+"ch": "๖",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 279,
+"bbox_h": 438,
+"base_dy": 396.52898662343125,
+"src": "Soft"
+},
+{
+"key": "u0E57",
+"ch": "๗",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 411,
+"bbox_h": 439,
+"base_dy": 398.97058118596453,
+"src": "Soft"
+},
+{
+"key": "u0E58",
+"ch": "๘",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 275,
+"bbox_h": 438,
+"base_dy": 378.2870490099465,
+"src": "Soft"
+},
+{
+"key": "u0E59",
+"ch": "๙",
+"type": "base",
+"ppm": 17.5,
+"bbox_w": 339,
+"bbox_h": 382,
+"base_dy": 322.73993113064915,
+"src": "Soft"
+},
+{
+"key": "u0E48_high",
+"ch": "่",
+"type": "tone2",
+"ppm": 17.5,
+"bbox_w": 40,
+"bbox_h": 82,
+"base_dy": 651.1901919282892,
+"src": "Firm"
+},
+{
+"key": "u0E49_high",
+"ch": "้",
+"type": "tone2",
+"ppm": 17.5,
+"bbox_w": 104,
+"bbox_h": 84,
+"base_dy": 661.8557002420469,
+"src": "Firm"
+},
+{
+"key": "u0E4A_high",
+"ch": "๊",
+"type": "tone2",
+"ppm": 17.5,
+"bbox_w": 142,
+"bbox_h": 127,
+"base_dy": 678.697565281321,
+"src": "Firm"
+},
+{
+"key": "u0E4B_high",
+"ch": "๋",
+"type": "tone2",
+"ppm": 17.5,
+"bbox_w": 112,
+"bbox_h": 113,
+"base_dy": 668.2341403864723,
+"src": "Firm"
+},
+{
+"key": "u0E4C_high",
+"ch": "์",
+"type": "tone2",
+"ppm": 17.5,
+"bbox_w": 113,
+"bbox_h": 184,
+"base_dy": 724.7745267325681,
+"src": "Firm"
+}
+]
