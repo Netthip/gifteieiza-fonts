@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+features.fea
+desktop.ini
+Thumbs.db
+.DS_Store
